@@ -5,7 +5,7 @@ func QuickSort(a []int) {
 	if len(a) <= 1 {
 		return
 	}
-    //find the correct position of the pivot element (all element in the left part of the pivot - smaller, in the right - greater)
+    	//find the correct position of the pivot element (all element in the left part of the pivot - smaller, in the right - greater)
 	pivotPosition := partition(a)
 
 	//recursively call the save process for both sides (pivot will not be affected)
