@@ -70,27 +70,3 @@ func FullOuterJoin(f1Path, f2Path, resultPath string) {
 		log.Fatal(err)
 	}
 }
-
-func main() {
-	f1Path := "f1.txt"
-	f2Path := "f2.txt"
-	resultPath := "result.txt"
-
-	f1Data := `first
-second
-forth
-fifth`
-	f2Data := `forth
-fifth
-seventh
-eighth`
-
-	if err := os.WriteFile(f1Path, []byte(f1Data), os.ModePerm); err != nil {
-		log.Fatal(err)
-	}
-	if err := os.WriteFile(f2Path, []byte(f2Data), os.ModePerm); err != nil {
-		log.Fatal(err)
-	}
-
-	FullOuterJoin(f1Path, f2Path, resultPath)
-}
